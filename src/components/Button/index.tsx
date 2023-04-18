@@ -5,7 +5,14 @@ import { Button } from "./Button";
 
 //@ts-ignore
 globalThis.run = ({ id }: { id: string }) => {
-  ReactDOM.createRoot(document.body as HTMLElement).render(
+  if (document.getElementById("test-bot")) {
+    return;
+  }
+  const root = document.createElement("div");
+  root.id = "test-bot";
+
+  document.body.appendChild(root);
+  ReactDOM.createRoot(root as HTMLElement).render(
     <div>
       <Button id={id} />
     </div>
