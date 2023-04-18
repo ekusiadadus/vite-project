@@ -14,22 +14,14 @@
     <script type="text/javascript">
       const script = document.getElementById("test");
       script.addEventListener("load", () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const id = urlParams.get("id");
+        const id = "test";
         console.log("test");
         globalThis.run({ id });
       });
     </script>
   </head>
+
   <body>
-    <script>
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const id = document.getElementById("id").value;
-        console.log("test");
-        globalThis.run({ id });
-      });
-    </script>
+    <div id="root"></div>
   </body>
 </html>
