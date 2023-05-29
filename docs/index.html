@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script
-      id="test"
+      id="spiralBot"
       type="text/javascript"
       async
       src="https://spiral-ai-dev-embedded-chat-bucket.s3.ap-northeast-1.amazonaws.com/embedded-chat.umd.cjs"
     ></script>
     <script type="text/javascript">
-      const script = document.getElementById("test");
+      const script = document.getElementById("spiralBot");
       script.addEventListener("load", () => {
-        globalThis.run({ id: "ここにBOT_IDを埋め込む" });
+        globalThis.run({
+          botID: "85e6b4ac-156a-4ca5-b610-4f0d819ba528",
+          companyID: "0fd94bad-9817-45b7-983e-67217c95bf07",
+          firstMessage: "はじめまして、私はSpiralBotです！",
+          chatTitle: "vite-project のテストです！",
+        });
       });
     </script>
   </head>
